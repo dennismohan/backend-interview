@@ -27,10 +27,13 @@ public class Main
                 * Creating a list of "Tasks"
                 * Executing in order, the Tasks from the list
          */
-        System.out.println("Task 1");
+        System.out.println("\nTask 1");
         TaskOne.execute();
 
-        System.out.println("Task 2");
+        System.out.println("\nTask 2");
         TaskTwo.execute();
+
+        System.out.println("\nTask 3");
+        TaskThree.execute();
     }
 }
