@@ -50,7 +50,21 @@ public class TaskUtils {
         return quotes;
     }
 
-    //  TODO: Should store some data for debugging: relative path, error message that occured
-    // (i believe stack is stored due to parent being Exception)
+    public static final String BASE_PATH = "src/main/resources/";
+    public static List<BraceBook> readBooksFromFiles(String basePath, String[] fileNameList) throws ReadBraceBookException {
+        List<BraceBook> books = new ArrayList<BraceBook>();
+        for(String fileName:fileNameList){
+            BraceBook book = TaskUtils.getBraceBook(basePath + fileName);
+            books.add(book);
+        }
+        return books;
+    }
+
+    public static List<BraceBook> readBooksFromFiles(String[] fileNameList) throws ReadBraceBookException {
+        return readBooksFromFiles(BASE_PATH, fileNameList);
+    }
+
+    //  TODO: Should store some data for debugging: relative path/file error occured at, error message that occured, etc
+    // (i believe stack is stored by default when Exception is thrown, so we have that at least)
     public static class ReadBraceBookException extends Exception{}
 }
