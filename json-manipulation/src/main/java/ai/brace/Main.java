@@ -27,6 +27,10 @@ public class Main
                 * Creating a list of "Tasks"
                 * Executing in order, the Tasks from the list
          */
+        System.out.println("Task 1");
         TaskOne.execute();
+
+        System.out.println("Task 2");
+        TaskTwo.execute();
     }
 }
