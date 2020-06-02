@@ -19,13 +19,13 @@ public class BraceBook {
 //  private String author;
 //  private String translator;
 //  private String language;
-  private BraceQuote[] textArray;
+  private List<BraceQuote> textArray;
 
   BraceBook(){
       // default no-args constructor
   }
 
   public List<BraceQuote> getTextArray() {
-    return Arrays.asList(textArray);
+    return textArray;
   }
 }

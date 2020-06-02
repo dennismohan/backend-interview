@@ -19,7 +19,7 @@ public class TaskOne {
         List<BraceQuote> bookQuotes;
         try{
             BraceBook book = TaskUtils.getBraceBook(relativeFilePath);
-            bookQuotes = Arrays.asList(book.getTextArray());
+            bookQuotes = book.getTextArray();
         } catch(TaskUtils.ReadBraceBookException err) {
             System.out.println("Failed to read " + relativeFilePath);
             return;
