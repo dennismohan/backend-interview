@@ -7,25 +7,26 @@ import com.google.gson.Gson;
 
 public class Main
 {
-    /* Note: Spent more time then wanted on environment issues :(
-    *   IntelliJ had issues at first, after some debugging switched to vs code
-    *   VS Code had issues... after some debugging switched back
+    /* Note: Spent more time then wanted on environment issues
+    *   IntelliJ had issues importing the build, after some debugging switched to vs code
+    *   VS Code had issues, intellisense, debugging, etc... after some debugging switched back
     *   Further debugging in intellij and finally was able to find the issue under.
     *       Issue was the build configuration did not point to gradle properly.
+    *
+    *   Note: Spent roughly 1 hour fighting with local environment.
+    *         At the end of the hour local environment issues were
+    *         fixed, and I had json file deserialization into pojo.
     *  */
+
+    public static Gson gson = new Gson();
     public static void main(String[] args)
     {
-        Gson gson = new Gson();
-        Path a1JsonPath = Paths.get("src/main/resources/a1.json");
-        try{
-            Reader reader = Files.newBufferedReader(a1JsonPath);
-            BraceBook book = gson.fromJson(reader,BraceBook.class);
-            System.out.println(book);
-
-            // close reader
-            reader.close();
-        } catch(Exception err) {
-            System.out.println("Error: " + err);
-        }
+        /*
+            TODO: Cleanup this driver function by:
+                * Creating an interface
+                * Creating a list of "Tasks"
+                * Executing in order, the Tasks from the list
+         */
+        TaskOne.execute();
     }
 }
