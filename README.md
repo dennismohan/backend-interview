@@ -46,3 +46,5 @@ example of how to load the lines of a text file from the `resources` directory.
 - Google's GSON library is already included as a dependency in the root
 `build.gradle` file's description of the `json-manipulation` sub-project. It
 should automatically resolve when imported properly in that project.
+
+> Dennis: Test git permissions
