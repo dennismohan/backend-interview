@@ -35,5 +35,8 @@ public class Main
 
         System.out.println("\nTask 3");
         TaskThree.execute();
+
+        System.out.println("\nTask 4");
+        TaskFour.execute();
     }
 }
