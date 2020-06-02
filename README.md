@@ -18,7 +18,7 @@ This is how we will test your solutions!
 #### Via the command line:
 
 Assuming you've installed JDK12 and Gradle 6+, you can invoke Gradle directly by
-doing `gradle :mystery-duplicates:run` or `gradle :json-manipuation:run` on the
+doing `gradle :mystery-duplicates:run` or `gradle :json-manipulation:run` on the
 command line.
 
 #### Please Note:
