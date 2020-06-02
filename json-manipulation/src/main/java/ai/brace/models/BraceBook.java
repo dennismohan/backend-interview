@@ -7,6 +7,8 @@
 
 package ai.brace.models;
 
+import java.util.Arrays;
+import java.util.List;
 import java.util.UUID;
 
 public class BraceBook {
@@ -23,7 +25,7 @@ public class BraceBook {
       // default no-args constructor
   }
 
-  public BraceQuote[] getTextArray() {
-    return textArray;
+  public List<BraceQuote> getTextArray() {
+    return Arrays.asList(textArray);
   }
 }

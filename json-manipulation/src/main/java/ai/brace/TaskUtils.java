@@ -8,6 +8,7 @@ import java.io.Reader;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
@@ -39,6 +40,14 @@ public class TaskUtils {
         for(BraceQuote quote:quotes){
             System.out.println(quote.getTextData());
         }
+    }
+
+    public static List<BraceQuote> mergeBookQuotes(List<BraceBook> books) {
+        List<BraceQuote> quotes = new ArrayList<BraceQuote>();
+        for(BraceBook book:books) {
+            quotes.addAll(book.getTextArray());
+        }
+        return quotes;
     }
 
     //  TODO: Should store some data for debugging: relative path, error message that occured
